@@ -1,0 +1,19 @@
+{
+  "name": "test-publish-npm-myf",
+  "version": "1.0.0",
+  "description": "description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaYiFanGitHub/test-publish-npm.git"
+  },
+  "author": "mayifan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaYiFanGitHub/test-publish-npm/issues"
+  },
+  "homepage": "https://github.com/MaYiFanGitHub/test-publish-npm#readme"
+}
