@@ -6,10 +6,10 @@
 last_version=`npm view test-publish-npm-myf version`
 # 构造一个新的版本号
 now_version=`npm version patch`
-echo "^$lastversion"
-echo $nowversion
+echo "^$last_version"
+echo $now_version
 
-if [ "^$lastversion" > $nowversion ];then
+if [ "^$last_version" > $now_version ];then
     echo "不成立"
     exit 1
 fi
