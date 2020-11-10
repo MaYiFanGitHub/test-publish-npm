@@ -11,6 +11,6 @@ echo $now_version
 
 if [ "v$last_version" > $now_version ];then
     echo "不成立"
-    exit 1
+    exit 0
 fi
 exit 0
