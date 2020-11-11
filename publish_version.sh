@@ -26,7 +26,8 @@ function build_version() {
 
 # 发包
 function publish() {
-    print "----正在发布版本 $1...----" "[32m"
+    version=`$1#*//`
+    print "----正在发布版本 $version...----" "[32m"
     # npm publish --registry=http://registry.npm.baidu-int.com
     npm publish
     if [ $? -eq 0 ]; then
