@@ -50,10 +50,12 @@ function is_login() {
     fi
 }
 
+# 发包类型
+type=$1
 # 判断登陆
 is_login
 if [ $? -eq 0 ]; then
-    build_version
+    build_version $type
     exit 0
 else
     print "----登陆或注册失败...----" "[31m"
