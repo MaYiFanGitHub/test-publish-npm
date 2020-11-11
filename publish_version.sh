@@ -32,7 +32,7 @@ function publish() {
         now_version=`npm view test-publish-npm-myf version`
         print "----版本发布成功，当前版本号v$now_version----" "[32m"
         print "----请使用 npm i @baidu/med-ui@$now_version --registry=http://registry.npm.baidu-int.com 更新依赖----" "[32m"
-        exit 1
+        exit 0
     else
         print "----发布失败...----" "[31m"
         exit 1
