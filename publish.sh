@@ -74,7 +74,7 @@ function build_version() {
 # 发包
 function publish() {
     print "----正在发布版本 $1...----" "[32m"
-    npm publish --registry=http://registry.npm.baidu-int.com
+    # npm publish --registry=http://registry.npm.baidu-int.com
     if [ $? -eq 0 ]; then
         print "----版本发布成功，当前版本号XXXX\n请使用 npm i @baidu/med-ui@1.1.1 --registry=http://registry.npm.baidu-int.com 更新依赖----" "[32m"
     else
