@@ -1,6 +1,6 @@
 {
   "name": "test-publish-npm-myf",
-  "version": "1.0.41",
+  "version": "1.0.42",
   "description": "description",
   "main": "index.js",
   "scripts": {
