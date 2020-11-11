@@ -101,6 +101,7 @@ function is_login() {
 is_login
 if [ $? -eq 0 ]; then
     build_version
+    exit 0
 else
     print "----登陆或注册失败...----" "[31m"
     exit 1
