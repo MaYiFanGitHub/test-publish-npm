@@ -12,7 +12,7 @@ function build_version() {
     username=`npm whoami`
 
     print "----正在构造版本...----" "[32m"
-    version=`npm version patch -m "$username update to %s"`
+    version=`npm version $1 -m "$username update to %s"`
 
     if [ $? -eq 0 ]; then
         print "----构造版本成功，最新的版本号为$version----" "[32m"
