@@ -76,7 +76,8 @@ function publish() {
     print "----正在发布版本 $1...----" "[32m"
     # npm publish --registry=http://registry.npm.baidu-int.com
     if [ $? -eq 0 ]; then
-        print "----版本发布成功，当前版本号XXXX\n请使用 npm i @baidu/med-ui@1.1.1 --registry=http://registry.npm.baidu-int.com 更新依赖----" "[32m"
+        now_version=`npm view test-publish-npm-myf version`
+        print "----版本发布成功，当前版本号v$now_version\n请使用 npm i @baidu/med-ui@$now_version --registry=http://registry.npm.baidu-int.com 更新依赖----" "[32m"
         exit 0
     else
         print "----发布失败...----" "[31m"
