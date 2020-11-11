@@ -37,6 +37,7 @@ function publish() {
         print "----请自行确认本次更改的代码，是否要推送到远程仓库（git push origin HEAD:refs/for/master）----" 
         exit 0
     else
+        git tag -d $version
         print "----发布失败...----" "[31m"
         exit 1
     fi
