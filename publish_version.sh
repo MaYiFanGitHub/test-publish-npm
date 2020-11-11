@@ -19,7 +19,7 @@ function build_version() {
         publish $version
         exit 0
     else
-        print "----构造失败, 请保证当前git工作区是干净的----" "[31m"
+        print "----构造失败, 请保证当前git工作区是干净的(git add . && git commit)----" "[31m"
         exit 1
     fi
 }
