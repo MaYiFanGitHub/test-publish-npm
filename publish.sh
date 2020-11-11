@@ -65,6 +65,7 @@ function build_version() {
     if [ $? -eq 0 ]; then
         print "----构造版本成功，最新的版本号为$version----" "[32m"
         publish $version
+        exit 0
     else
         print "----构造失败, 请保证当前git工作区是干净的----" "[31m"
         exit 1
