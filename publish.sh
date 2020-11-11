@@ -75,6 +75,7 @@ function build_version() {
 function publish() {
     print "----正在发布版本 $1...----" "[32m"
     # npm publish --registry=http://registry.npm.baidu-int.com
+    npm publish
     if [ $? -eq 0 ]; then
         now_version=`npm view test-publish-npm-myf version`
         print "----版本发布成功，当前版本号v$now_version----" "[32m"
