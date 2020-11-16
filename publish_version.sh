@@ -63,6 +63,7 @@ function is_login() {
 git add .
 STAGE_FILE=$(git diff --cached --name-only)
 if [ "$STAGE_FILE" = "" ]; then
+    print "----当前未作修改，禁止发包！----"
     exit 0
 fi
 echo 123
