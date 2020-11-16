@@ -28,7 +28,7 @@ function build_version() {
     else
         print "----构造失败----" "[31m"
         
-        if [$2 -eq 0]; then
+        if [ $2 -eq 0 ]; then
             git reset --soft $preCommitId
         fi
         exit 1
@@ -55,7 +55,7 @@ function publish() {
         git tag -d $version
         print "----发布失败...----" "[31m"
 
-        if [STAGE_FILE -eq 0]; then
+        if [ STAGE_FILE -eq 0 ]; then
             git reset --soft $2
         fi
         exit 1
