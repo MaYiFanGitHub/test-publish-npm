@@ -9,9 +9,7 @@ function print() {
 
 # 构造版本发包
 function build_version() {
-    git add .
     git commit -m '构造版本临时提交'
-
     username=`npm whoami`
 
     print "----正在构造版本...----" "[32m"
@@ -62,11 +60,13 @@ function is_login() {
 }
 
 # 获取提交文件
+git add .
 STAGE_FILE=$(git diff --cached --name-only)
-if [ $STAGE_FILE == '' ]; then
+if [ $STAGE_FILE ]; then
     exit 0
 fi
 echo 123
+
 # 发包类型
 type=$1
 # 判断登陆
