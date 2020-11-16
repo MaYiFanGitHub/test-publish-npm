@@ -60,9 +60,13 @@ function is_login() {
         npm adduser
     fi
 }
+
 # 获取提交文件
 STAGE_FILE=$(git diff --cached --name-only)
-
+if [ $STAGE_FILE == '' ]; then
+    exit 0
+fi
+echo 123
 # 发包类型
 type=$1
 # 判断登陆
