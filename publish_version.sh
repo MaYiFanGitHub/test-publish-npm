@@ -61,7 +61,7 @@ function is_login() {
 
 # 获取提交文件
 git add .
-STAGE_FILE=$(git diff --cached --name-only)
+STAGE_FILE=`git diff --cached --name-only`
 if [ "$STAGE_FILE" = "" ]; then
     print "----当前未作修改，禁止发包！----"
     exit 0
