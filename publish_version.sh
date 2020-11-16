@@ -48,9 +48,9 @@ function publish() {
         print "----请自行确认本次更改的代码，是否要推送到远程仓库（git push origin HEAD:refs/for/master）----" 
 
         echo $2
-        if [ "$2" != "" ]; then
-            git reset --soft $2
-        fi
+        # if [ "$2" != "" ]; then
+        #     git reset --soft $2
+        # fi
         exit 0
     else
         git tag -d $version
