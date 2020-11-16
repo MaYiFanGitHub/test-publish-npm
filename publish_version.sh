@@ -62,7 +62,7 @@ function is_login() {
 # 获取提交文件
 git add .
 STAGE_FILE=$(git diff --cached --name-only)
-if [ $STAGE_FILE = "" ]; then
+if [ "$STAGE_FILE" = "" ]; then
     exit 0
 fi
 echo 123
