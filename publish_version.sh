@@ -60,6 +60,8 @@ function is_login() {
         npm adduser
     fi
 }
+# 获取提交文件
+STAGE_FILE=$(git diff --cached --name-only)
 
 # 发包类型
 type=$1
