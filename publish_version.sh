@@ -23,7 +23,7 @@ function build_version() {
     if [ $? -eq 0 ]; then
         print "----构造版本成功，最新的版本号为$version----" "[32m"
         echo $preCommitId
-        # publish $version $preCommitId
+        publish $version $preCommitId
         exit 0
     else
         print "----构造失败----" "[31m"
@@ -47,7 +47,7 @@ function publish() {
         print "----请使用 npm i @baidu/med-ui@${version#*v} -S --registry=http://registry.npm.baidu-int.com 更新依赖----" "[32m"
         print "----请自行确认本次更改的代码，是否要推送到远程仓库（git push origin HEAD:refs/for/master）----" 
 
-        if [STAGE_FILE -eq 0]; then
+        if [ STAGE_FILE -eq 0 ]; then
             git reset --soft $2
         fi
         exit 0
