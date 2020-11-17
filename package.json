@@ -1,11 +1,11 @@
 {
   "name": "test-publish-npm-myf",
-  "version": "1.0.67",
+  "version": "1.0.72",
   "description": "description",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "version:patch": "sh publish_version.sh patch",
+    "version:patch": "git push origin HEAD:refs/for/master",
     "version:prerelease": "sh publish_version.sh prerelease"
   },
   "repository": {

@@ -9,11 +9,9 @@ function print() {
 
 # 构造版本发包
 function build_version() {
-    echo $1
-    echo $2
     if [ $2 -eq 0 ]; then
-        git commit -m '构造版本临时提交'
         preCommitId=`git rev-parse HEAD`
+        git commit -m '构造版本临时提交'
     fi
     username=`npm whoami`
 
@@ -47,10 +45,6 @@ function publish() {
         print "----请使用 npm i @baidu/med-ui@${version#*v} -S --registry=http://registry.npm.baidu-int.com 更新依赖----" "[32m"
         print "----请自行确认本次更改的代码，是否要推送到远程仓库（git push origin HEAD:refs/for/master）----" 
 
-        echo $2
-        # if [ "$2" != "" ]; then
-        #     git reset --soft $2
-        # fi
         exit 0
     else
         git tag -d $version
